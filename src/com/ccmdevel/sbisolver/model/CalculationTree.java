@@ -2,9 +2,9 @@ package com.ccmdevel.sbisolver.model;
 
 import java.math.BigInteger;
 
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionDivideZero;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionExponentNegative;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionModuloZero;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionDivideZero;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionExponentNegative;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionModuloZero;
 
 public class CalculationTree {
 	Node root;
@@ -38,15 +38,15 @@ public class CalculationTree {
 				left = left.multiply(right);
 				break;
 			case (OpCode.DIVIDE):
-				OOOSExceptions.checkDivideZero(right);
+				SBISExceptions.checkDivideZero(right);
 				left = left.divide(right);
 				break;
 			case (OpCode.EXP):
-				OOOSExceptions.checkExponent(left, right);
+				SBISExceptions.checkExponent(left, right);
 				left = left.pow(right.intValue());
 				break;
 			case (OpCode.MOD):
-				OOOSExceptions.checkModuloZero(right);
+				SBISExceptions.checkModuloZero(right);
 				left = left.mod(right.abs());
 			}
 			return left;

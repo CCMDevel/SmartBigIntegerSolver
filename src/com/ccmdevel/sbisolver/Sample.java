@@ -2,11 +2,11 @@ package com.ccmdevel.sbisolver;
 
 import com.ccmdevel.sbisolver.model.OpCode;
 
-public class SampleOOOS {
+public class Sample {
 	public static final void main(String[] asdf){
 		
 		// 2 + 2 = 
-		OOOSolver solver = new OOOSolver();
+		SBISolver solver = new SBISolver();
 		solver.appendOperand("2");
 		solver.setCurrentOp(OpCode.ADD);
 		solver.appendOperand("2");

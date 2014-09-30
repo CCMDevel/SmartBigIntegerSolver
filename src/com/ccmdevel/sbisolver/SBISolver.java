@@ -4,16 +4,16 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 import com.ccmdevel.sbisolver.model.CalculationTree;
-import com.ccmdevel.sbisolver.model.OOOSExceptions;
+import com.ccmdevel.sbisolver.model.SBISExceptions;
 import com.ccmdevel.sbisolver.model.OpCode;
 import com.ccmdevel.sbisolver.model.OperandNode;
 import com.ccmdevel.sbisolver.model.OperationNode;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionCalculationFormat;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionDivideZero;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionExponentNegative;
-import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionModuloZero;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionCalculationFormat;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionDivideZero;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionExponentNegative;
+import com.ccmdevel.sbisolver.model.SBISExceptions.ExceptionModuloZero;
 
-public class OOOSolver {
+public class SBISolver {
 	// Calculation with operands above these thresholds is not recommended as they
 	// take too long.
 	public static final BigInteger FACT_THRESHOLD = new BigInteger("200000")
@@ -128,15 +128,15 @@ public class OOOSolver {
 				ans = ans.add(operand);
 				break;
 			case OpCode.DIVIDE:
-				OOOSExceptions.checkDivideZero(operand);
+				SBISExceptions.checkDivideZero(operand);
 				ans = ans.divide(operand);
 				break;
 			case OpCode.EXP:
-				OOOSExceptions.checkExponent(ans, operand);
+				SBISExceptions.checkExponent(ans, operand);
 				ans = ans.pow(operand.intValue());
 				break;
 			case OpCode.MOD:
-				OOOSExceptions.checkModuloZero(operand);
+				SBISExceptions.checkModuloZero(operand);
 				ans = ans.mod(operand);
 				break;
 			case OpCode.MULTIPLY:

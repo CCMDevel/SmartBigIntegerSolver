@@ -2,7 +2,7 @@ package com.ccmdevel.sbisolver.model;
 
 import java.math.BigInteger;
 
-public class OOOSExceptions {
+public class SBISExceptions {
 	public static final int EXCEPTION_EXP_BIG = 0xe0
 	   	 			      , EXCEPTION_EXP_NEG = 0xe1
 		 			      , EXCEPTION_FACT_BIG = 0xe2
@@ -54,7 +54,7 @@ public class OOOSExceptions {
 		*/
 	}
 	
-	private OOOSExceptions(){
+	private SBISExceptions(){
 	}
 	
 	public static class ExceptionCalculationFormat extends Exception{
