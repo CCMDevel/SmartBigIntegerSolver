@@ -1,10 +1,10 @@
-package com.ccmdevel.ooosolver.model;
+package com.ccmdevel.sbisolver.model;
 
 import java.math.BigInteger;
 
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionDivideZero;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionExponentNegative;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionModuloZero;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionDivideZero;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionExponentNegative;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionModuloZero;
 
 public class CalculationTree {
 	Node root;

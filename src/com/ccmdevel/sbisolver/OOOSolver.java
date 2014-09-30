@@ -1,17 +1,17 @@
-package com.ccmdevel.ooosolver;
+package com.ccmdevel.sbisolver;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-import com.ccmdevel.ooosolver.model.CalculationTree;
-import com.ccmdevel.ooosolver.model.OOOSExceptions;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionCalculationFormat;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionDivideZero;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionExponentNegative;
-import com.ccmdevel.ooosolver.model.OOOSExceptions.ExceptionModuloZero;
-import com.ccmdevel.ooosolver.model.OpCode;
-import com.ccmdevel.ooosolver.model.OperandNode;
-import com.ccmdevel.ooosolver.model.OperationNode;
+import com.ccmdevel.sbisolver.model.CalculationTree;
+import com.ccmdevel.sbisolver.model.OOOSExceptions;
+import com.ccmdevel.sbisolver.model.OpCode;
+import com.ccmdevel.sbisolver.model.OperandNode;
+import com.ccmdevel.sbisolver.model.OperationNode;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionCalculationFormat;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionDivideZero;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionExponentNegative;
+import com.ccmdevel.sbisolver.model.OOOSExceptions.ExceptionModuloZero;
 
 public class OOOSolver {
 	// Calculation with operands above these thresholds is not recommended as they

@@ -1,6 +1,6 @@
-package com.ccmdevel.ooosolver;
+package com.ccmdevel.sbisolver;
 
-import com.ccmdevel.ooosolver.model.OpCode;
+import com.ccmdevel.sbisolver.model.OpCode;
 
 public class SampleOOOS {
 	public static final void main(String[] asdf){

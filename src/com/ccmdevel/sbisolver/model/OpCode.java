@@ -1,4 +1,4 @@
-package com.ccmdevel.ooosolver.model;
+package com.ccmdevel.sbisolver.model;
 
 public class OpCode {
 	public static final int NONE = 0x0
